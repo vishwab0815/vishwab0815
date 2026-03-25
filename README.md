@@ -1,7 +1,7 @@
 # Hi there, I'm Vishwanath B! 👋
 ### Full-Stack Developer | AI/ML Enthusiast | Cybersecurity Advocate
 
-I'm a 3rd-year engineering student at VTU (Bengaluru) passionate about building scalable web applications, agentic AI engines, and secure systems. When I'm not writing code or designing narrative-driven CTF challenges, you'll find me preparing for the CDS exam, training with the NCC Army Wing, hitting the gym for calisthenics, or exploring complex Teentaal compositions on the tabla.
+I'm a 3rd-year engineering student at VTU (Bengaluru) passionate about building scalable web applications, agentic AI engines, and secure systems. When I'm not writing code or designing narrative-driven CTF challenges.
 
 ## 🚀 About Me
 
