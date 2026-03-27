@@ -1,5 +1,5 @@
 # Hi there, I'm Vishwanath B! 👋
-### Full-Stack Developer | AI/ML Enthusiast | Cybersecurity Advocate
+### Full-Stack Developer | AI/ML Engineer | Cybersecurity Advocate
 
 I'm a 3rd-year engineering student at VTU (Bengaluru) passionate about building scalable web applications, agentic AI engines, and secure systems. When I'm not writing code or designing narrative-driven CTF challenges.
 
