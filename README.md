@@ -137,25 +137,13 @@
 ## 📈 GitHub Activity
 
 <div align="center">
-
-### 🏆 GitHub Trophies
-
-[![trophy](https://github-profile-trophy.vercel.app/?username=vishwab0815&theme=algolia&no-frame=true&no-bg=true&margin-w=8&row=1)](https://github.com/vishwab0815)
-
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=vishwab0815&theme=react&hide_border=true&background=0D1117&ring=58A6FF&fire=58A6FF&currStreakNum=C9D1D9&dates=C9D1D9" alt="Vishwanath's GitHub Streak" width="60%" />
 </div>
 
 <br>
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=vishwab0815&show_icons=true&theme=react&hide_border=true&bg_color=0D1117&title_color=58A6FF&icon_color=58A6FF&text_color=C9D1D9&rank_icon=github&include_all_commits=true&count_private=true" alt="Vishwanath's GitHub Stats" width="49%" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=vishwab0815&theme=react&hide_border=true&background=0D1117&ring=58A6FF&fire=58A6FF&currStreakNum=C9D1D9&dates=C9D1D9" alt="Vishwanath's GitHub Streak" width="49%" />
-</div>
-
-<br>
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=vishwab0815&layout=donut&theme=react&hide_border=true&bg_color=0D1117&title_color=58A6FF&text_color=C9D1D9&langs_count=8" alt="Top Languages" width="38%" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=vishwab0815&theme=github_dark&utcOffset=5.5" alt="Productive Time" width="38%" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=vishwab0815&theme=github_dark&utcOffset=5.5" alt="Productive Time" width="55%" />
 </div>
 
 <br>
@@ -163,6 +151,7 @@
 <div align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=vishwab0815&theme=react-dark&bg_color=0D1117&hide_border=true&color=58A6FF&line=58A6FF&point=58A6FF&area=true&area_color=58A6FF" alt="Activity Graph" width="95%" />
 </div>
+
 
 ---
 
