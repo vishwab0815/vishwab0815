@@ -13,16 +13,6 @@
 
 ---
 
-<div align="center">
-
-### 💬 Words I Code By
-
-[![readme-jokes](https://readme-jokes.vercel.app/api?hideBorder&theme=react&qColor=%2358A6FF&aColor=%23C9D1D9&bgColor=%230D1117&codeColor=%2358A6FF)](https://github.com/ABSphreak/readme-jokes)
-
-</div>
-
----
-
 ## 🚀 About Me
 
 > *3rd-year Engineering student at **VTU, Bengaluru** passionate about building scalable web apps, agentic AI systems, and secure platforms.*
@@ -137,19 +127,25 @@
 ## 📈 GitHub Activity
 
 <div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=vishwab0815&theme=react&hide_border=true&background=0D1117&ring=58A6FF&fire=58A6FF&currStreakNum=C9D1D9&dates=C9D1D9" alt="Vishwanath's GitHub Streak" width="60%" />
+  <img src="https://img.shields.io/badge/GitHub-Dashboard-58A6FF?style=for-the-badge&labelColor=0D1117" alt="GitHub Dashboard" />
+</div>
+
+<div align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=vishwab0815&theme=react&hide_border=true&background=0D1117&ring=58A6FF&fire=58A6FF&currStreakNum=C9D1D9&dates=C9D1D9" alt="Vishwanath's GitHub Streak" width="49%" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=vishwab0815&theme=github_dark&utcOffset=5.5" alt="Productive Time" width="41%" />
 </div>
 
 <br>
 
 <div align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=vishwab0815&theme=github_dark&utcOffset=5.5" alt="Productive Time" width="55%" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=vishwab0815&theme=github_dark" alt="Top Languages by Repo" width="45%" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=vishwab0815&theme=github_dark" alt="Top Languages by Commits" width="45%" />
 </div>
 
 <br>
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=vishwab0815&theme=react-dark&bg_color=0D1117&hide_border=true&color=58A6FF&line=58A6FF&point=58A6FF&area=true&area_color=58A6FF" alt="Activity Graph" width="95%" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=vishwab0815&theme=react-dark&bg_color=0D1117&hide_border=true&color=58A6FF&line=58A6FF&point=58A6FF&area=true&area_color=58A6FF" alt="Activity Graph" width="94%" />
 </div>
 
 
