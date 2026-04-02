@@ -106,13 +106,6 @@
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3>🏥 Swastyam (CURA)</h3>
-      <p>An AI-powered rural healthcare platform bridging medical access gaps in India through intelligent diagnostics and telemedicine support.</p>
-      <br/>
-      <img src="https://img.shields.io/badge/AI--Powered-FF6F00?style=flat-square&logo=tensorflow&logoColor=white" />
-      <img src="https://img.shields.io/badge/Next.js-000?style=flat-square&logo=nextdotjs" />
-    </td>
-    <td width="50%" valign="top">
       <h3>🎓 College Placement Portal</h3>
       <p>A comprehensive placement management platform built in 24 hours during a hackathon, streamlining campus hiring for universities.</p>
       <br/>
