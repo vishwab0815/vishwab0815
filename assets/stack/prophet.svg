@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="56.25" height="48" viewBox="-44 0 300 256" role="img" aria-label="Prophet">
+<title>Prophet</title>
+<rect width="256" height="256" rx="60" fill="#242938"/>
+<path d="M52 164 L86 140 L112 150 L142 112" fill="none" stroke="#58A6FF" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M142 112 L170 98 L204 70" fill="none" stroke="#A371F7" stroke-width="12" stroke-linecap="round" stroke-dasharray="2 20"/>
+<text x="128" y="214" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif" font-size="40" font-weight="700" fill="#E6EDF3" text-anchor="middle">prophet</text>
+</svg>

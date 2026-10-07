@@ -115,11 +115,11 @@ I build systems that **watch, reason and act on their own**: an AIOps engine tha
   </tr>
   <tr>
     <td><b>AI / ML</b></td>
-    <td><img src="https://skillicons.dev/icons?i=pytorch,tensorflow&perline=12" alt="PyTorch, TensorFlow" />&nbsp;&nbsp;<sub>LangGraph · LangChain · Hugging Face · Llama 3 · Whisper · ChromaDB · Prophet · XGBoost</sub></td>
+    <td><img src="https://skillicons.dev/icons?i=pytorch,tensorflow&perline=12" alt="PyTorch, TensorFlow" /><img src="assets/stack/langchain.svg" alt="LangChain · LangGraph" title="LangChain · LangGraph" height="48" /><img src="assets/stack/huggingface.svg" alt="Hugging Face" title="Hugging Face" height="48" /><img src="assets/stack/llama.svg" alt="Llama 3" title="Llama 3" height="48" /><img src="assets/stack/whisper.svg" alt="Whisper" title="Whisper" height="48" /><img src="assets/stack/chromadb.svg" alt="ChromaDB" title="ChromaDB" height="48" /><img src="assets/stack/prophet.svg" alt="Prophet" title="Prophet" height="48" /><img src="assets/stack/xgboost.svg" alt="XGBoost" title="XGBoost" height="48" /></td>
   </tr>
   <tr>
     <td><b>DevOps / AIOps</b></td>
-    <td><img src="https://skillicons.dev/icons?i=docker,kubernetes,githubactions,prometheus,nginx,linux&perline=12" alt="Docker, Kubernetes, GitHub Actions, Prometheus, Nginx, Linux" />&nbsp;&nbsp;<sub>Helm · GitOps · Celery</sub></td>
+    <td><img src="https://skillicons.dev/icons?i=docker,kubernetes,githubactions,prometheus,nginx,linux&perline=12" alt="Docker, Kubernetes, GitHub Actions, Prometheus, Nginx, Linux" /><img src="assets/stack/helm.svg" alt="Helm" title="Helm" height="48" /><img src="assets/stack/gitops.svg" alt="GitOps" title="GitOps" height="48" /><img src="assets/stack/celery.svg" alt="Celery" title="Celery" height="48" /></td>
   </tr>
   <tr>
     <td><b>Data</b></td>
