@@ -4,7 +4,6 @@ import { summarize, renderOverview, renderLanguages, renderActivity } from '../c
 import { toPods, renderCluster } from '../cards/cluster.mjs';
 import { renderStatus } from '../cards/status.mjs';
 import { renderIncidents } from '../cards/incidents.mjs';
-import { renderHallOfFame } from '../cards/halloffame.mjs';
 import { summarizeEndpoints, ENDPOINTS } from '../monitor.mjs';
 import { duration, ago } from '../lib/svg.mjs';
 
@@ -72,31 +71,18 @@ test('every card renders in both themes, empty and populated', () => {
     { id: 'INC-0001', key: 'widget:img.shields.io', severity: 'minor', auto: true, title: 'img.shields.io stopped serving images', detail: '12 images swapped for text fallbacks automatically', openedAt: iso(NOW - 3 * DAY), resolvedAt: iso(NOW - 3 * DAY + 47 * 60e3), resolution: 'Service back; original images restored automatically' },
     { id: 'INC-0002', key: 'endpoint:Quick-Bite', severity: 'major', auto: false, title: 'Quick-Bite is unreachable', detail: 'No response within 45s', openedAt: iso(NOW - 2 * 3600e3), resolvedAt: null, resolution: null },
   ];
-  const solvers = Array.from({ length: 20 }, (_, i) => ({ login: `hacker${i}`, solvedAt: iso(NOW - i * DAY), avatar: i % 2 ? null : 'data:image/png;base64,AAAA' }));
 
   for (const theme of ['dark', 'light']) {
     assertSvg(renderOverview(DATA, stats, theme));
     assertSvg(renderLanguages(DATA, stats, theme));
     assertSvg(renderActivity(DATA, stats, theme));
-    assertSvg(renderCluster(pods, theme, { namespace: 'vishwab0815', hidden: 'Zm9v' }));
+    assertSvg(renderCluster(pods, theme, { namespace: 'vishwab0815' }));
     assertSvg(renderCluster([], theme, { namespace: 'vishwab0815' }));
-    assertSvg(renderStatus(summarizeEndpoints(state, ENDPOINTS, NOW), theme, { now: NOW, since: iso(NOW), hidden: 'abc' }));
+    assertSvg(renderStatus(summarizeEndpoints(state, ENDPOINTS, NOW), theme, { now: NOW, since: iso(NOW) }));
     assertSvg(renderStatus(summarizeEndpoints({}, ENDPOINTS, NOW), theme, { now: NOW, since: undefined }));
     assertSvg(renderIncidents(incidents, theme, { now: NOW, since: iso(NOW), monitored: { widgets: 30, endpoints: 5 } }));
     assertSvg(renderIncidents([], theme, { now: NOW, since: iso(NOW), monitored: { widgets: 30, endpoints: 5 } }));
-    assertSvg(renderHallOfFame(solvers, theme, { live: true }));
-    assertSvg(renderHallOfFame([], theme, { live: true }));
-    assertSvg(renderHallOfFame([], theme, { live: false }));
   }
-});
-
-test('hidden CTF fragments land only where intended', () => {
-  const pods = toPods(DATA.repos, DATA.login, NOW);
-  assert.match(renderCluster(pods, 'dark', { namespace: 'x', hidden: 'Zm9vYmFy' }), /b64=Zm9vYmFy/);
-  assert.doesNotMatch(renderCluster(pods, 'dark', { namespace: 'x' }), /kube-system/);
-  const eps = summarizeEndpoints({}, ENDPOINTS, NOW);
-  assert.match(renderStatus(eps, 'dark', { now: NOW, hidden: 'zrffntr' }), /maintenance-note: zrffntr/);
-  assert.doesNotMatch(renderStatus(eps, 'light', { now: NOW }), /maintenance-note/);
 });
 
 test('status banner reflects the latest checks', () => {

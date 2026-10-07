@@ -54,7 +54,20 @@ function sparkline(values, x, y, w, h, color) {
 <polyline points="${line}" fill="none" stroke="${color}" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>`;
 }
 
-export function renderCluster(pods, theme, { namespace, hidden = null }) {
+const TYPE_SECONDS = 1.2;
+
+// The command types itself once, then rows stream in like real kubectl output.
+function typedCommand(text, t) {
+  const chars = text.length + 2, charW = 8.2, width = chars * charW + 40;
+  const values = Array.from({ length: chars + 1 }, (_, i) => (i * charW).toFixed(1));
+  values.push(width.toFixed(1));
+  return `<clipPath id="typed"><rect x="20" y="54" width="${width.toFixed(1)}" height="26">
+  <animate attributeName="width" dur="${TYPE_SECONDS}s" fill="freeze" calcMode="discrete" values="${values.join(';')}"/>
+</rect></clipPath>
+<text x="24" y="72" class="mono reveal" font-size="13" clip-path="url(#typed)"><tspan fill="${t.good}" style="fill:${t.good}">❯</tspan> ${esc(text)}<tspan class="cursor" fill="${t.accent}" style="fill:${t.accent}"> ▍</tspan></text>`;
+}
+
+export function renderCluster(pods, theme, { namespace }) {
   const t = THEMES[theme];
   const color = { Running: t.good, Completed: t.muted, CrashLoopBackOff: t.bad };
   const shown = pods.slice(0, MAX_PODS);
@@ -73,7 +86,7 @@ export function renderCluster(pods, theme, { namespace, hidden = null }) {
   const rows = shown.map((p, i) => {
     const y = firstRow + i * rowH;
     const c = color[p.status];
-    return `<g class="fade" style="animation-delay:${(0.15 + i * 0.06).toFixed(2)}s">
+    return `<g class="fade" style="animation-delay:${(TYPE_SECONDS + 0.05 + i * 0.06).toFixed(2)}s">
   ${i % 2 ? `<rect x="12" y="${y - 18}" width="${W - 24}" height="${rowH}" rx="5" fill="${t.grid}" opacity=".45"/>` : ''}
   <text x="${C.name}" y="${y}" class="mono" font-size="12.5">${esc(truncate(p.name, 28))}</text>
   ${dot(C.status + 4, y - 4, c, p.status === 'Running', 3.5)}
@@ -86,22 +99,26 @@ export function renderCluster(pods, theme, { namespace, hidden = null }) {
 </g>`;
   }).join('\n');
 
-  // Fragment 1 of the CTF: a kube-system pod that is in the source but never drawn.
-  const secret = hidden
-    ? `<g visibility="hidden" aria-hidden="true"><text x="24" y="${H - 4}" class="mono" font-size="1">kube-system  ctf-fragment-1  1/1  Running  annotations: fragment.vishwab0815.dev/b64=${esc(hidden)}</text></g>`
-    : '';
-
   return frame({
     width: W, height: H, theme,
     title: 'Live cluster',
     meta: 'every repo is a pod · refreshed hourly',
     label: `Cluster view of ${namespace}'s repositories: ${summary}`,
-    body: `<text x="24" y="72" class="mono" font-size="13"><tspan fill="${t.good}" style="fill:${t.good}">❯</tspan> kubectl get pods -n ${esc(namespace)} --sort-by=.status.lastPush</text>
+    body: `<style>
+  .cursor { animation: blink 1.1s steps(1) infinite; } @keyframes blink { 50% { opacity: 0; } }
+  .sweep { opacity: 0; animation: sweep 7s ease-in-out ${TYPE_SECONDS + 1}s infinite; }
+  @keyframes sweep { 0% { opacity: 0; transform: translateY(0); } 4% { opacity: 1; } 30% { opacity: 1; transform: translateY(${shown.length * rowH}px); } 34%, 100% { opacity: 0; transform: translateY(${shown.length * rowH}px); } }
+  @media (prefers-reduced-motion: reduce) { .reveal { clip-path: none !important; } .sweep { display: none; } }
+</style>
+<defs><linearGradient id="sweepFill" x1="0" x2="0" y1="0" y2="1">
+  <stop offset="0" stop-color="${t.accent}" stop-opacity="0"/><stop offset=".85" stop-color="${t.accent}" stop-opacity=".10"/><stop offset="1" stop-color="${t.accent}" stop-opacity=".45"/>
+</linearGradient></defs>
+${typedCommand(`kubectl get pods -n ${namespace} --sort-by=.status.lastPush`, t)}
 <line x1="24" x2="${W - 24}" y1="${headY + 9}" y2="${headY + 9}" stroke="${t.border}"/>
 ${header}
 ${rows}
+<rect x="12" y="${firstRow - 18 - 34}" width="${W - 24}" height="36" fill="url(#sweepFill)" class="sweep"/>
 <text x="24" y="${H - 16}" class="small mono">${summary}</text>
-<text x="${W - 24}" y="${H - 16}" class="small" text-anchor="end">status from push activity and CI checks</text>
-${secret}`,
+<text x="${W - 24}" y="${H - 16}" class="small" text-anchor="end">status from push activity and CI checks</text>`,
   });
 }

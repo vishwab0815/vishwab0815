@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="240" viewBox="0 0 840 240" role="img" aria-label="PhishGuard: a suspicious URL is typed, SSL, domain age and IP reputation checks fail, and the shield flags it as phishing with a risk score of 94">
+<title>PhishGuard: a suspicious URL is typed, SSL, domain age and IP reputation checks fail, and the shield flags it as phishing with a risk score of 94</title>
+<style>
+  .mono { font-family: ui-monospace,SFMono-Regular,'Cascadia Code',Consolas,'Liberation Mono',Menlo,monospace; }
+  .sans { font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif; }
+
+  @keyframes c0 { 0%, 29.9% { opacity: 0; transform: translateY(6px); } 33%, 92% { opacity: 1; transform: none; } 96%, 100% { opacity: 0; } }
+  @keyframes c1 { 0%, 39.9% { opacity: 0; transform: translateY(6px); } 43%, 92% { opacity: 1; transform: none; } 96%, 100% { opacity: 0; } }
+  @keyframes c2 { 0%, 49.9% { opacity: 0; transform: translateY(6px); } 53%, 92% { opacity: 1; transform: none; } 96%, 100% { opacity: 0; } }
+  .c0 { animation: c0 8s infinite; } .c1 { animation: c1 8s infinite; } .c2 { animation: c2 8s infinite; }
+  .shield { animation: shield 8s infinite; }
+  @keyframes shield { 0%, 58% { fill: #21262D; } 62%, 92% { fill: #F85149; } 97%, 100% { fill: #21262D; } }
+  .ring { transform-box: fill-box; transform-origin: center; opacity: 0; animation: ring 8s infinite; }
+  @keyframes ring { 0%, 60% { opacity: 0; transform: scale(1); } 62% { opacity: .8; } 80%, 100% { opacity: 0; transform: scale(1.5); } }
+  @keyframes verdict { 0%, 61.9% { opacity: 0; transform: translateY(6px); } 65%, 92% { opacity: 1; transform: none; } 96%, 100% { opacity: 0; } } .verdict { animation: verdict 8s infinite; }
+  .caret { animation: caret 1s steps(1) infinite; } @keyframes caret { 50% { opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } .reveal { clip-path: none !important; } }
+</style>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0D1117"/><stop offset="1" stop-color="#22121A"/></linearGradient>
+  <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#E6EDF3" opacity=".06"/></pattern>
+  <clipPath id="card"><rect width="840" height="240" rx="16"/></clipPath>
+<clipPath id="url"><rect x="92" y="36" width="468.0" height="40">
+  <animate attributeName="width" dur="8s" repeatCount="indefinite" calcMode="discrete" values="0.0;12.0;24.0;36.0;48.0;60.0;72.0;84.0;96.0;108.0;120.0;132.0;144.0;156.0;168.0;180.0;192.0;204.0;216.0;228.0;240.0;252.0;264.0;276.0;288.0;300.0;312.0;324.0;336.0;348.0;360.0;372.0;384.0;396.0;408.0;420.0;432.0;444.0;456.0;468.0" keyTimes="0.0000;0.0062;0.0123;0.0185;0.0246;0.0308;0.0369;0.0431;0.0492;0.0554;0.0615;0.0677;0.0738;0.0800;0.0862;0.0923;0.0985;0.1046;0.1108;0.1169;0.1231;0.1292;0.1354;0.1415;0.1477;0.1538;0.1600;0.1662;0.1723;0.1785;0.1846;0.1908;0.1969;0.2031;0.2092;0.2154;0.2215;0.2277;0.2338;0.2400"/>
+</rect></clipPath>
+</defs>
+<g clip-path="url(#card)">
+<rect width="840" height="240" fill="url(#bg)"/>
+<rect width="840" height="240" fill="url(#dots)"/>
+
+<rect x="36" y="30" width="768" height="52" rx="26" fill="#010409" fill-opacity=".8" stroke="#30363D"/>
+<g transform="translate(58 44)" fill="none" stroke="#F85149" stroke-width="2.5" stroke-linecap="round">
+  <rect x="0" y="10" width="20" height="15" rx="3" fill="#F85149" fill-opacity=".2"/><path d="M4 10 V6 a6 6 0 0 1 11 -3"/>
+</g>
+<text x="92" y="64" class="mono reveal" font-size="20" fill="#E6EDF3" clip-path="url(#url)">https://paypa1-secure.co/verify-account</text>
+<g class="c0"><text x="56" y="124" class="mono" font-size="19" fill="#E6EDF3">SSL certificate</text>
+<line x1="237" x2="400" y1="118" y2="118" stroke="#30363D" stroke-dasharray="2 5"/>
+<text x="410" y="124" class="mono" font-size="19" fill="#F85149">self-signed</text><text x="560" y="124" class="mono" font-size="20" font-weight="700" fill="#F85149">✕</text></g>
+<g class="c1"><text x="56" y="160" class="mono" font-size="19" fill="#E6EDF3">Domain age</text>
+<line x1="180" x2="400" y1="154" y2="154" stroke="#30363D" stroke-dasharray="2 5"/>
+<text x="410" y="160" class="mono" font-size="19" fill="#F85149">3 days</text><text x="560" y="160" class="mono" font-size="20" font-weight="700" fill="#F85149">✕</text></g>
+<g class="c2"><text x="56" y="196" class="mono" font-size="19" fill="#E6EDF3">IP reputation</text>
+<line x1="214.20000000000002" x2="400" y1="190" y2="190" stroke="#30363D" stroke-dasharray="2 5"/>
+<text x="410" y="196" class="mono" font-size="19" fill="#F85149">blocklisted</text><text x="560" y="196" class="mono" font-size="20" font-weight="700" fill="#F85149">✕</text></g>
+<path d="M690 100 l46 17 v34 c0 29 -21 47 -46 57 c-25 -10 -46 -28 -46 -57 v-34 z" fill="none" stroke="#F85149" stroke-width="3" class="ring"/>
+<path d="M690 100 l46 17 v34 c0 29 -21 47 -46 57 c-25 -10 -46 -28 -46 -57 v-34 z" class="shield" fill="#F85149" stroke="#30363D" stroke-width="2"/>
+<text x="690" y="162" class="sans" font-size="32" font-weight="800" fill="#E6EDF3" text-anchor="middle">94</text>
+<text x="690" y="182" class="mono" font-size="12" fill="#E6EDF3" text-anchor="middle" letter-spacing="2">RISK</text>
+<text x="690" y="232" class="mono verdict" font-size="17" font-weight="700" fill="#F85149" text-anchor="middle" letter-spacing="2">PHISHING</text>
+</g>
+<rect x=".5" y=".5" width="839" height="239" rx="16" fill="none" stroke="#30363D"/>
+</svg>

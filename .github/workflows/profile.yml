@@ -9,13 +9,12 @@ name: Profile
 on:
   schedule:
     - cron: "17 * * * *"
-  workflow_dispatch:           # also dispatched by ctf.yml when someone captures the flag
+  workflow_dispatch:
   push:
     branches: [main]
 
 permissions:
   contents: write
-  issues: read
 
 concurrency:
   group: profile
@@ -50,7 +49,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_USER: ${{ github.repository_owner }}
-          CTF_FLAG: ${{ secrets.CTF_FLAG }}
           STATE_IN: ${{ runner.temp }}/state.json
 
       - name: Generate contribution snake

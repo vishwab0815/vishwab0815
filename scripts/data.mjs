@@ -1,11 +1,10 @@
 // Everything the cards need from GitHub, normalized into one plain object.
 
 import { graphql } from './lib/github.mjs';
-import { MAX_SOLVERS } from './cards/halloffame.mjs';
 
 const DAY = 86400e3;
 
-const PROFILE_QUERY = `query($login: String!, $owner: String!, $name: String!, $since8w: GitTimestamp!, $since7d: GitTimestamp!) {
+const PROFILE_QUERY = `query($login: String!, $since8w: GitTimestamp!, $since7d: GitTimestamp!) {
   user(login: $login) {
     login name createdAt
     followers { totalCount }
@@ -24,11 +23,6 @@ const PROFILE_QUERY = `query($login: String!, $owner: String!, $name: String!, $
       }
     }
   }
-  repository(owner: $owner, name: $name) {
-    issues(first: 100, labels: ["ctf-solved"], orderBy: {field: CREATED_AT, direction: ASC}) {
-      nodes { closedAt createdAt author { login avatarUrl(size: 96) } }
-    }
-  }
 }`;
 
 const CALENDAR_QUERY = `query($login: String!, $from: DateTime!, $to: DateTime!) {
@@ -40,22 +34,10 @@ const CALENDAR_QUERY = `query($login: String!, $from: DateTime!, $to: DateTime!)
   }
 }`;
 
-async function embedAvatar(url) {
-  try {
-    const res = await fetch(url, { signal: AbortSignal.timeout(15e3) });
-    if (!res.ok) return null;
-    const type = res.headers.get('content-type') ?? 'image/png';
-    return `data:${type};base64,${Buffer.from(await res.arrayBuffer()).toString('base64')}`;
-  } catch {
-    return null;
-  }
-}
-
-export async function fetchGitHub({ login, repo, token, now }) {
-  const [owner, name] = repo.split('/');
+export async function fetchGitHub({ login, token, now }) {
   const iso = (ms) => new Date(ms).toISOString();
-  const { user, repository } = await graphql(token, PROFILE_QUERY, {
-    login, owner, name, since8w: iso(now - 56 * DAY), since7d: iso(now - 7 * DAY),
+  const { user } = await graphql(token, PROFILE_QUERY, {
+    login, since8w: iso(now - 56 * DAY), since7d: iso(now - 7 * DAY),
   });
   if (!user) throw new Error(`User ${login} not found`);
 
@@ -72,18 +54,6 @@ export async function fetchGitHub({ login, repo, token, now }) {
     for (const w of cc.contributionCalendar.weeks)
       for (const d of w.contributionDays) days.set(d.date, d.contributionCount);
   }
-
-  // First solve per person; the owner testing their own CTF doesn't count.
-  const seen = new Set();
-  const solved = (repository?.issues.nodes ?? [])
-    .filter((i) => i.author && i.author.login.toLowerCase() !== login.toLowerCase())
-    .filter((i) => !seen.has(i.author.login) && seen.add(i.author.login))
-    .sort((a, b) => (a.closedAt ?? a.createdAt).localeCompare(b.closedAt ?? b.createdAt));
-  const solvers = await Promise.all(solved.map(async (i, idx) => ({
-    login: i.author.login,
-    solvedAt: i.closedAt ?? i.createdAt,
-    avatar: idx < MAX_SOLVERS ? await embedAvatar(i.author.avatarUrl) : null,
-  })));
 
   return {
     login: user.login,
@@ -109,6 +79,5 @@ export async function fetchGitHub({ login, repo, token, now }) {
       };
     }),
     days: [...days].map(([date, count]) => ({ date, count })),
-    solvers,
   };
 }

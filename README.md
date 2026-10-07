@@ -19,7 +19,7 @@ I build systems that **watch, reason and act on their own**: an AIOps engine tha
 - 🌱 **Learning:** Quantum ML · advanced AI agents · Kubernetes
 - 🎓 **Engineering** at VTU, Bengaluru
 
-> ⚙️ **This profile runs like production.** The cluster, status page and incident log below are rebuilt every hour from live data by [its own pipeline](.github/workflows/profile.yml). When a widget breaks, the README heals itself and logs the incident. There's also a flag hidden somewhere.
+> ⚙️ **This profile runs like production.** The cluster, status page and incident log below are rebuilt every hour from live data by [its own pipeline](.github/workflows/profile.yml). When a widget breaks, the README heals itself and logs the incident.
 
 ## Live cluster
 
@@ -37,6 +37,7 @@ I build systems that **watch, reason and act on their own**: an AIOps engine tha
 <table>
   <tr>
     <td width="50%" valign="top">
+      <a href="https://github.com/vishwab0815/ASTRA"><img src="assets/projects/astra.svg" alt="ASTRA heals a crashing Kubernetes pod: alert, root cause, GitOps PR, healed" width="100%" /></a>
       <h3><a href="https://github.com/vishwab0815/ASTRA">🌌 ASTRA</a></h3>
       <p>Autonomous AIOps engine for Kubernetes. It investigates alerts in real time, finds the root cause with multi-round telemetry reasoning and local vector memory, then ships the fix as a GitOps PR behind a human confidence gate.</p>
       <img src="https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logo=langchain&logoColor=white" alt="LangGraph" />
@@ -45,6 +46,7 @@ I build systems that **watch, reason and act on their own**: an AIOps engine tha
       <img src="https://img.shields.io/badge/Helm-0F1689?style=flat-square&logo=helm&logoColor=white" alt="Helm" />
     </td>
     <td width="50%" valign="top">
+      <a href="https://github.com/vishwab0815/FORENSICS"><img src="assets/projects/forensics.svg" alt="Deepfake Forensics scans a face and a spectrogram, then shows a heatmap and verdict" width="100%" /></a>
       <h3><a href="https://github.com/vishwab0815/FORENSICS">🕵️ Deepfake Forensics</a></h3>
       <p>Image, audio and video deepfake detection with visual evidence (Grad-CAM heatmaps, flagged spectrogram windows, per-frame confidence) and a timestamped PDF report ready for a cybercrime complaint.</p>
       <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch" />
@@ -55,6 +57,7 @@ I build systems that **watch, reason and act on their own**: an AIOps engine tha
   </tr>
   <tr>
     <td width="50%" valign="top">
+      <a href="https://github.com/vishwab0815/Phish-Guard"><img src="assets/projects/phishguard.svg" alt="PhishGuard checks a suspicious URL and flags it as phishing" width="100%" /></a>
       <h3><a href="https://github.com/vishwab0815/Phish-Guard">🎣 PhishGuard</a></h3>
       <p>AI-assisted phishing and threat analysis for URLs, emails, files and messages. Layered checks (domain intel, SSL, IP reputation, threat feeds) roll up into one risk score, with an AI security chat for incident response.</p>
       <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js" />
@@ -63,8 +66,10 @@ I build systems that **watch, reason and act on their own**: an AIOps engine tha
       <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" />
     </td>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/vishwab0815/AlgoBTC">📈 AlgoPilotX BTC</a></h3>
+      <img src="assets/projects/algopilot.svg" alt="AlgoPilotX draws a live Heikin-Ashi chart with a breakout entry and trailing stop" width="100%" />
+      <h3>📈 AlgoPilotX BTC</h3>
       <p>Real-time paper-trading engine for the BTCUSDT perpetual, written in Rust. It runs a Heikin-Ashi breakout strategy on live mark-price and order-book feeds, with trend and volatility filters, trailing stops and a crash-safe ledger.</p>
+      <img src="https://img.shields.io/badge/Private_repo-30363D?style=flat-square&logo=github&logoColor=white" alt="Private repo" />
       <img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />
       <img src="https://img.shields.io/badge/Live_market_data-238636?style=flat-square" alt="Live market data" />
       <img src="https://img.shields.io/badge/Paper_trading-6E40C9?style=flat-square" alt="Paper trading" />
@@ -72,6 +77,7 @@ I build systems that **watch, reason and act on their own**: an AIOps engine tha
   </tr>
   <tr>
     <td width="50%" valign="top">
+      <a href="https://github.com/vishwab0815/CTF-CyberPunk"><img src="assets/projects/ctf-cyberpunk.svg" alt="CTF-CyberPunk: neon grid and a glitching ACCESS GRANTED" width="100%" /></a>
       <h3><a href="https://github.com/vishwab0815/CTF-CyberPunk">🛡️ CTF-CyberPunk</a></h3>
       <p>A narrative-driven cyberpunk CTF platform with animated terminals, interactive hacking levels and real-world web security challenges.</p>
       <a href="https://ctfcybersec.vercel.app"><img src="https://img.shields.io/badge/Live_demo-58A6FF?style=flat-square&logo=vercel&logoColor=white" alt="Live demo" /></a>
@@ -79,6 +85,7 @@ I build systems that **watch, reason and act on their own**: an AIOps engine tha
       <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
     </td>
     <td width="50%" valign="top">
+      <a href="https://github.com/vishwab0815/LLM-Trainer"><img src="assets/projects/bottrainer.svg" alt="BotTrainer turns speech into intent JSON with Whisper and Llama-3" width="100%" /></a>
       <h3><a href="https://github.com/vishwab0815/LLM-Trainer">🤖 BotTrainer</a></h3>
       <p>NLU platform that replaces model training with zero- and few-shot prompting on Llama-3-8B, plus Whisper for voice input. It does intent classification and entity extraction with Pydantic-validated output.</p>
       <a href="https://llm-trainer.streamlit.app/"><img src="https://img.shields.io/badge/Live_demo-58A6FF?style=flat-square&logo=streamlit&logoColor=white" alt="Live demo" /></a>
@@ -155,26 +162,6 @@ I build systems that **watch, reason and act on their own**: an AIOps engine tha
     <img src="https://raw.githubusercontent.com/vishwab0815/vishwab0815/output/github-contribution-grid-snake.svg" alt="Contribution snake" width="98.5%" />
   </picture>
 </div>
-
-## Capture the flag
-
-Three fragments of a flag are hidden in this profile. Find them, assemble the flag, and prove you have it without ever posting it.
-**Start the way every engineer starts: view the source.**
-
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/vishwab0815/vishwab0815/output/halloffame-dark.svg" />
-    <img src="https://raw.githubusercontent.com/vishwab0815/vishwab0815/output/halloffame-light.svg" alt="CTF hall of fame" width="98.5%" />
-  </picture>
-  <br/><br/>
-  <a href="https://github.com/vishwab0815/vishwab0815/issues/new?template=ctf.yml"><img src="https://img.shields.io/badge/Submit_your_proof-F85149?style=for-the-badge&logo=hackthebox&logoColor=white&labelColor=0D1117" alt="Submit your proof" /></a>
-</div>
-
-<!--
-  🏁 CTF · you're on the right track.
-  The cluster dashboard only shows one namespace; `kubectl get pods -A` would show you more.
-  Open the cluster image on its own and read its source.
--->
 
 <div align="center">
   <img src="assets/footer.svg" alt="" width="100%" />

@@ -2,7 +2,7 @@
 
 import { THEMES, esc, frame, dot, shortDate, truncate } from '../lib/svg.mjs';
 
-export function renderStatus(endpoints, theme, { now, since, hidden = null }) {
+export function renderStatus(endpoints, theme, { now, since }) {
   const t = THEMES[theme];
   const W = 900, top = 124, rowH = 52, barX = 244, barW = 4.6, gap = 1.4;
   const H = top + endpoints.length * rowH + 30;
@@ -42,14 +42,11 @@ ${dot(46, 75, color, known)}
 <text x="${barX}" y="${legendY}" class="small">90 days ago</text>
 <text x="${barsEnd.toFixed(1)}" y="${legendY}" class="small" text-anchor="end">today</text>`;
 
-  // Fragment 2 of the CTF lives only in the dark variant: "every status page has a dark side".
-  const secret = hidden ? `<text x="0" y="${H}" font-size="1" opacity="0" aria-hidden="true">maintenance-note: ${esc(hidden)}</text>` : '';
-
   return frame({
     width: W, height: H, theme,
     title: 'Status · live demos',
     meta: `${endpoints.length} endpoints`,
     label: `Status of live demos: ${state}. ${endpoints.map((e) => `${e.name} ${e.uptime === null ? 'no data' : `${e.uptime.toFixed(2)}% uptime`}`).join(', ')}`,
-    body: `${banner}\n${rows}\n${legend}\n${secret}`,
+    body: `${banner}\n${rows}\n${legend}`,
   });
 }
