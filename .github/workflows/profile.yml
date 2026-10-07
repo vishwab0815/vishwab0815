@@ -1,0 +1,88 @@
+name: Profile
+
+# Runs the profile like a production system, every hour:
+#   1. tests the generator          4. renders every card + the contribution snake
+#   2. checks the live demos         5. publishes them to the `output` branch
+#   3. self-heals broken widgets     6. commits any README healing back to main
+# State (uptime samples, incident log) lives in state.json on the `output` branch.
+
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:           # also dispatched by ctf.yml when someone captures the flag
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  issues: read
+
+concurrency:
+  group: profile
+  cancel-in-progress: false   # let a running build finish writing state
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Test
+        run: node --test "scripts/test/*.test.mjs"
+
+      - name: Restore state
+        run: |
+          if git fetch --depth=1 origin output && git show origin/output:state.json > "$RUNNER_TEMP/state.json"; then
+            echo "restored state.json from output branch"
+          else
+            echo '{}' > "$RUNNER_TEMP/state.json"
+            echo "no previous state; starting fresh"
+          fi
+
+      - name: Check, heal and render
+        run: node scripts/build.mjs dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USER: ${{ github.repository_owner }}
+          CTF_FLAG: ${{ secrets.CTF_FLAG }}
+          STATE_IN: ${{ runner.temp }}/state.json
+
+      - name: Generate contribution snake
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#58A6FF
+
+      - name: Publish to output branch
+        uses: crazy-max/ghaction-github-pages@v5
+        with:
+          target_branch: output
+          build_dir: dist
+          jekyll: false
+          commit_message: "chore: refresh profile assets"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit self-healing changes
+        run: |
+          if git diff --quiet -- README.md .github/heal-store.json; then
+            echo "README healthy; nothing to commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md .github/heal-store.json
+          git commit -m "fix(readme): self-heal broken widgets"
+          for attempt in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep $((attempt * 5))
+          done
+          exit 1

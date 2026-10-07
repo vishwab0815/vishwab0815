@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="120" viewBox="0 0 1200 120" role="img" aria-label="Decorative wave">
+<title>Thanks for visiting</title>
+<defs>
+  <linearGradient id="wave" x1="0" x2="1">
+    <stop offset="0" stop-color="#58A6FF"/><stop offset=".5" stop-color="#A371F7"/><stop offset="1" stop-color="#58A6FF"/>
+  </linearGradient>
+  <path id="w" d="M0 60 Q150 20 300 60 T600 60 T900 60 T1200 60 T1500 60 T1800 60 T2100 60 T2400 60 V120 H0 Z"/>
+</defs>
+<g fill="url(#wave)">
+  <use href="#w" y="10" opacity=".25">
+    <animateTransform attributeName="transform" type="translate" from="0 0" to="-600 0" dur="14s" repeatCount="indefinite"/>
+  </use>
+  <use href="#w" y="26" opacity=".45">
+    <animateTransform attributeName="transform" type="translate" from="-600 0" to="0 0" dur="10s" repeatCount="indefinite"/>
+  </use>
+  <use href="#w" y="44" opacity=".9">
+    <animateTransform attributeName="transform" type="translate" from="0 0" to="-600 0" dur="7s" repeatCount="indefinite"/>
+  </use>
+</g>
+</svg>

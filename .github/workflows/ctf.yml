@@ -1,0 +1,33 @@
+name: CTF
+
+# Verifies flag submissions opened through the CTF issue form.
+# The issue body is untrusted: it is only ever read by scripts/ctf.mjs from the event payload,
+# never interpolated into a shell command.
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: read
+  issues: write
+  actions: write   # dispatch the profile build so the hall of fame updates right away
+
+jobs:
+  verify:
+    if: contains(github.event.issue.body, '### Proof of flag')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Verify submission
+        run: node scripts/ctf.mjs verify
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CTF_FLAG: ${{ secrets.CTF_FLAG }}

@@ -1,0 +1,31 @@
+name: 🏁 CTF flag submission
+description: Found all three fragments? Prove you have the flag without revealing it.
+title: "🏁 CTF submission"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Never paste the flag itself.** Issues are public. Submit a hash that proves you know the flag and only works for your account:
+
+        `sha256("<flag>:<your GitHub username in lowercase>")`
+
+        **macOS / Linux**
+        ```sh
+        printf '%s' 'vishwa{...}:yourusername' | sha256sum    # macOS: shasum -a 256
+        ```
+
+        **Windows PowerShell**
+        ```powershell
+        $s = 'vishwa{...}:yourusername'
+        -join ([Security.Cryptography.SHA256]::Create().ComputeHash([Text.Encoding]::UTF8.GetBytes($s)) | ForEach-Object { $_.ToString('x2') })
+        ```
+
+        A bot checks your proof within a minute. If it's right, you're on the Hall of Fame.
+  - type: input
+    id: proof
+    attributes:
+      label: Proof of flag
+      description: The 64-character SHA-256 hex digest.
+      placeholder: 3f79bb7b435b05321651daefd374cdc681dc06faa65e374e38337b88ca046dea
+    validations:
+      required: true
