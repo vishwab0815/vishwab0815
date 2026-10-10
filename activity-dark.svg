@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="330" viewBox="0 0 900 330" role="img" aria-label="Contribution activity: 467 total contributions, current streak 7 days, longest streak 7 days">
+<title>Contribution activity: 467 total contributions, current streak 7 days, longest streak 7 days</title>
+<style>
+  text { font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif; fill: #E6EDF3; }
+  .mono { font-family: ui-monospace,SFMono-Regular,'Cascadia Code',Consolas,'Liberation Mono',Menlo,monospace; }
+  .title { font-size: 15px; font-weight: 600; }
+  .muted { fill: #8B949E; }
+  .label { font-size: 12px; fill: #8B949E; }
+  .num { font-size: 26px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .small { font-size: 11px; fill: #8B949E; }
+  .tab { font-variant-numeric: tabular-nums; }
+  .fade { animation: fade .6s ease-out backwards; }
+  .grow { transform-box: fill-box; transform-origin: left center; animation: grow .9s cubic-bezier(.2,.7,.2,1) backwards; }
+  .rise { transform-box: fill-box; transform-origin: center bottom; animation: rise .8s cubic-bezier(.2,.7,.2,1) backwards; }
+  .draw { stroke-dasharray: 2400; stroke-dashoffset: 0; animation: draw 2s ease-out backwards; }
+  .pulse { transform-box: fill-box; transform-origin: center; animation: pulse 2s ease-out infinite; }
+  @keyframes fade { from { opacity: 0; transform: translateY(6px); } }
+  @keyframes grow { from { transform: scaleX(0); } }
+  @keyframes rise { from { transform: scaleY(0); } }
+  @keyframes draw { from { stroke-dashoffset: 2400; } }
+  @keyframes pulse { from { transform: scale(1); opacity: .7; } to { transform: scale(2.6); opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } .pulse { display: none; } }
+</style>
+<defs>
+  <linearGradient id="brand" x1="0" x2="1" y1="0" y2="0">
+    <stop offset="0" stop-color="#58A6FF"/><stop offset="1" stop-color="#A371F7"/>
+  </linearGradient>
+</defs>
+<rect x="0.5" y="0.5" width="899" height="329" rx="12" fill="#0D1117" stroke="#30363D"/>
+<rect x="24" y="22" width="4" height="16" rx="2" fill="url(#brand)"/>
+<text x="36" y="35" class="title">Contribution activity · last 52 weeks</text>
+
+<defs>
+  <linearGradient id="area" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0" stop-color="#58A6FF" stop-opacity=".35"/><stop offset="1" stop-color="#58A6FF" stop-opacity="0"/>
+  </linearGradient>
+</defs>
+<g class="fade" style="animation-delay:0.1s">
+  <text x="24" y="72" class="label">Total contributions</text>
+  <text x="24" y="104" class="num">467</text>
+  <text x="24" y="124" class="small">since Nov 9, 2025</text>
+</g>
+<g class="fade" style="animation-delay:0.18s">
+  <text x="242" y="72" class="label">Current streak</text>
+  <text x="242" y="104" class="num">7 days</text>
+  <text x="242" y="124" class="small">keep it going</text>
+</g>
+<g class="fade" style="animation-delay:0.26s">
+  <text x="460" y="72" class="label">Longest streak</text>
+  <text x="460" y="104" class="num">7 days</text>
+  <text x="460" y="124" class="small">personal best</text>
+</g>
+<g class="fade" style="animation-delay:0.33999999999999997s">
+  <text x="678" y="72" class="label">Best day</text>
+  <text x="678" y="104" class="num">49</text>
+  <text x="678" y="124" class="small">Dec 3, 2025</text>
+</g>
+<line x1="56" x2="872" y1="284" y2="284" stroke="#21262D" />
+<text x="46" y="288" class="small" text-anchor="end">0</text>
+<line x1="56" x2="872" y1="252" y2="252" stroke="#21262D" stroke-dasharray="3 4"/>
+<text x="46" y="256" class="small" text-anchor="end">15</text>
+<line x1="56" x2="872" y1="220" y2="220" stroke="#21262D" stroke-dasharray="3 4"/>
+<text x="46" y="224" class="small" text-anchor="end">30</text>
+<line x1="56" x2="872" y1="188" y2="188" stroke="#21262D" stroke-dasharray="3 4"/>
+<text x="46" y="192" class="small" text-anchor="end">45</text>
+<line x1="56" x2="872" y1="156" y2="156" stroke="#21262D" stroke-dasharray="3 4"/>
+<text x="46" y="160" class="small" text-anchor="end">60</text>
+<text x="56.0" y="304" class="small" text-anchor="middle">Nov</text><text x="125.4" y="304" class="small" text-anchor="middle">Dec</text><text x="194.9" y="304" class="small" text-anchor="middle">Jan</text><text x="264.3" y="304" class="small" text-anchor="middle">Feb</text><text x="333.8" y="304" class="small" text-anchor="middle">Mar</text><text x="420.6" y="304" class="small" text-anchor="middle">Apr</text><text x="490.0" y="304" class="small" text-anchor="middle">May</text><text x="576.9" y="304" class="small" text-anchor="middle">Jun</text><text x="646.3" y="304" class="small" text-anchor="middle">Jul</text><text x="715.7" y="304" class="small" text-anchor="middle">Aug</text><text x="802.6" y="304" class="small" text-anchor="middle">Sep</text><text x="872.0" y="304" class="small" text-anchor="middle">Oct</text>
+<path d="M56.0,273.3 C58.9,271.2 67.6,261.2 73.4,260.5 C79.1,259.8 84.9,285.4 90.7,269.1 C96.5,252.7 102.3,166.7 108.1,162.4 C113.9,158.1 119.7,224.6 125.4,243.5 C131.2,262.3 137.0,272.6 142.8,275.5 C148.6,278.3 154.4,262.3 160.2,260.5 C166.0,258.8 171.7,263.4 177.5,264.8 C183.3,266.2 189.1,268.4 194.9,269.1 C200.7,269.8 206.5,266.6 212.3,269.1 C218.0,271.6 223.8,282.6 229.6,284.0 C235.4,285.4 241.2,277.6 247.0,277.6 C252.8,277.6 258.6,283.6 264.3,284.0 C270.1,284.4 275.9,279.7 281.7,279.7 C287.5,279.7 293.3,285.8 299.1,284.0 C304.9,282.2 310.6,276.5 316.4,269.1 C322.2,261.6 328.0,238.5 333.8,239.2 C339.6,239.9 345.4,270.8 351.1,273.3 C356.9,275.8 362.7,259.8 368.5,254.1 C374.3,248.4 380.1,243.8 385.9,239.2 C391.7,234.6 397.4,221.1 403.2,226.4 C409.0,231.7 414.8,263.0 420.6,271.2 C426.4,279.4 432.2,274.0 438.0,275.5 C443.7,276.9 449.5,279.0 455.3,279.7 C461.1,280.4 466.9,285.4 472.7,279.7 C478.5,274.0 484.3,248.4 490.0,245.6 C495.8,242.8 501.6,256.3 507.4,262.7 C513.2,269.1 519.0,280.4 524.8,284.0 C530.6,287.6 536.3,284.0 542.1,284.0 C547.9,284.0 553.7,284.0 559.5,284.0 C565.3,284.0 571.1,284.4 576.9,284.0 C582.6,283.6 588.4,281.9 594.2,281.9 C600.0,281.9 605.8,284.4 611.6,284.0 C617.4,283.6 623.1,279.7 628.9,279.7 C634.7,279.7 640.5,283.3 646.3,284.0 C652.1,284.7 657.9,284.0 663.7,284.0 C669.4,284.0 675.2,285.1 681.0,284.0 C686.8,282.9 692.6,284.0 698.4,277.6 C704.2,271.2 710.0,247.0 715.7,245.6 C721.5,244.2 727.3,263.4 733.1,269.1 C738.9,274.8 744.7,280.1 750.5,279.7 C756.3,279.4 762.0,275.1 767.8,266.9 C773.6,258.8 779.4,238.1 785.2,230.7 C791.0,223.2 796.8,220.7 802.6,222.1 C808.3,223.6 814.1,231.7 819.9,239.2 C825.7,246.7 831.5,268.7 837.3,266.9 C843.1,265.2 848.9,239.2 854.6,228.5 C860.4,217.9 869.1,207.2 872.0,202.9 L872.0,284 L56,284 Z" fill="url(#area)" class="fade" style="animation-delay:.8s;animation-duration:1.2s"/>
+<path d="M56.0,273.3 C58.9,271.2 67.6,261.2 73.4,260.5 C79.1,259.8 84.9,285.4 90.7,269.1 C96.5,252.7 102.3,166.7 108.1,162.4 C113.9,158.1 119.7,224.6 125.4,243.5 C131.2,262.3 137.0,272.6 142.8,275.5 C148.6,278.3 154.4,262.3 160.2,260.5 C166.0,258.8 171.7,263.4 177.5,264.8 C183.3,266.2 189.1,268.4 194.9,269.1 C200.7,269.8 206.5,266.6 212.3,269.1 C218.0,271.6 223.8,282.6 229.6,284.0 C235.4,285.4 241.2,277.6 247.0,277.6 C252.8,277.6 258.6,283.6 264.3,284.0 C270.1,284.4 275.9,279.7 281.7,279.7 C287.5,279.7 293.3,285.8 299.1,284.0 C304.9,282.2 310.6,276.5 316.4,269.1 C322.2,261.6 328.0,238.5 333.8,239.2 C339.6,239.9 345.4,270.8 351.1,273.3 C356.9,275.8 362.7,259.8 368.5,254.1 C374.3,248.4 380.1,243.8 385.9,239.2 C391.7,234.6 397.4,221.1 403.2,226.4 C409.0,231.7 414.8,263.0 420.6,271.2 C426.4,279.4 432.2,274.0 438.0,275.5 C443.7,276.9 449.5,279.0 455.3,279.7 C461.1,280.4 466.9,285.4 472.7,279.7 C478.5,274.0 484.3,248.4 490.0,245.6 C495.8,242.8 501.6,256.3 507.4,262.7 C513.2,269.1 519.0,280.4 524.8,284.0 C530.6,287.6 536.3,284.0 542.1,284.0 C547.9,284.0 553.7,284.0 559.5,284.0 C565.3,284.0 571.1,284.4 576.9,284.0 C582.6,283.6 588.4,281.9 594.2,281.9 C600.0,281.9 605.8,284.4 611.6,284.0 C617.4,283.6 623.1,279.7 628.9,279.7 C634.7,279.7 640.5,283.3 646.3,284.0 C652.1,284.7 657.9,284.0 663.7,284.0 C669.4,284.0 675.2,285.1 681.0,284.0 C686.8,282.9 692.6,284.0 698.4,277.6 C704.2,271.2 710.0,247.0 715.7,245.6 C721.5,244.2 727.3,263.4 733.1,269.1 C738.9,274.8 744.7,280.1 750.5,279.7 C756.3,279.4 762.0,275.1 767.8,266.9 C773.6,258.8 779.4,238.1 785.2,230.7 C791.0,223.2 796.8,220.7 802.6,222.1 C808.3,223.6 814.1,231.7 819.9,239.2 C825.7,246.7 831.5,268.7 837.3,266.9 C843.1,265.2 848.9,239.2 854.6,228.5 C860.4,217.9 869.1,207.2 872.0,202.9" fill="none" stroke="url(#brand)" stroke-width="2.5" stroke-linecap="round" class="draw"/>
+<g class="fade" style="animation-delay:1.6s"><circle cx="108.1" cy="162.4" r="9" fill="#58A6FF" opacity=".18"/><circle cx="108.1" cy="162.4" r="4" fill="#0D1117" stroke="#58A6FF" stroke-width="2"/></g>
+</svg>

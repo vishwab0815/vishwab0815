@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="196" viewBox="0 0 900 196" role="img" aria-label="Incident log: no incidents recorded. 27 widgets and 5 endpoints watched hourly.">
+<title>Incident log: no incidents recorded. 27 widgets and 5 endpoints watched hourly.</title>
+<style>
+  text { font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif; fill: #E6EDF3; }
+  .mono { font-family: ui-monospace,SFMono-Regular,'Cascadia Code',Consolas,'Liberation Mono',Menlo,monospace; }
+  .title { font-size: 15px; font-weight: 600; }
+  .muted { fill: #8B949E; }
+  .label { font-size: 12px; fill: #8B949E; }
+  .num { font-size: 26px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .small { font-size: 11px; fill: #8B949E; }
+  .tab { font-variant-numeric: tabular-nums; }
+  .fade { animation: fade .6s ease-out backwards; }
+  .grow { transform-box: fill-box; transform-origin: left center; animation: grow .9s cubic-bezier(.2,.7,.2,1) backwards; }
+  .rise { transform-box: fill-box; transform-origin: center bottom; animation: rise .8s cubic-bezier(.2,.7,.2,1) backwards; }
+  .draw { stroke-dasharray: 2400; stroke-dashoffset: 0; animation: draw 2s ease-out backwards; }
+  .pulse { transform-box: fill-box; transform-origin: center; animation: pulse 2s ease-out infinite; }
+  @keyframes fade { from { opacity: 0; transform: translateY(6px); } }
+  @keyframes grow { from { transform: scaleX(0); } }
+  @keyframes rise { from { transform: scaleY(0); } }
+  @keyframes draw { from { stroke-dashoffset: 2400; } }
+  @keyframes pulse { from { transform: scale(1); opacity: .7; } to { transform: scale(2.6); opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } .pulse { display: none; } }
+</style>
+<defs>
+  <linearGradient id="brand" x1="0" x2="1" y1="0" y2="0">
+    <stop offset="0" stop-color="#58A6FF"/><stop offset="1" stop-color="#A371F7"/>
+  </linearGradient>
+</defs>
+<rect x="0.5" y="0.5" width="899" height="195" rx="12" fill="#0D1117" stroke="#30363D"/>
+<rect x="24" y="22" width="4" height="16" rx="2" fill="url(#brand)"/>
+<text x="36" y="35" class="title">Incident log · self-healing</text>
+<text x="876" y="35" class="small" text-anchor="end">27 widgets and 5 endpoints watched hourly</text>
+<g class="fade" style="animation-delay:.15s">
+  <circle cx="450" cy="98" r="20" fill="#3FB950" fill-opacity=".14"/>
+  <path d="M442 98.5l5.5 5.5 11-11.5" fill="none" stroke="#3FB950" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="450" y="146" font-size="15" font-weight="600" text-anchor="middle">No incidents recorded</text>
+  <text x="450" y="168" class="label" text-anchor="middle">Broken widgets get swapped for fallbacks and restored automatically · watching since Oct 7, 2026</text>
+</g>
+</svg>
