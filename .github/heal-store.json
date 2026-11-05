@@ -1,1 +1,22 @@
-{}
+{
+  "92991898": {
+    "url": "https://img.shields.io/badge/Live_market_data-238636?style=flat-square",
+    "original": "<img src=\"https://img.shields.io/badge/Live_market_data-238636?style=flat-square\" alt=\"Live market data\" />",
+    "since": "2026-11-05T22:41:41.512Z"
+  },
+  "0bfaf911": {
+    "url": "https://img.shields.io/badge/Live_demo-58A6FF?style=flat-square&logo=vercel&logoColor=white",
+    "original": "<img src=\"https://img.shields.io/badge/Live_demo-58A6FF?style=flat-square&logo=vercel&logoColor=white\" alt=\"Live demo\" />",
+    "since": "2026-11-05T22:41:41.512Z"
+  },
+  "e28fd22d": {
+    "url": "https://img.shields.io/badge/Portfolio-vishwa--b.vercel.app-58A6FF?style=for-the-badge&logo=vercel&logoColor=white&labelColor=0D1117",
+    "original": "![Portfolio](https://img.shields.io/badge/Portfolio-vishwa--b.vercel.app-58A6FF?style=for-the-badge&logo=vercel&logoColor=white&labelColor=0D1117)",
+    "since": "2026-11-05T22:41:41.512Z"
+  },
+  "2c2d949b": {
+    "url": "https://img.shields.io/badge/Email-Say_hi-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0D1117",
+    "original": "![Email](https://img.shields.io/badge/Email-Say_hi-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0D1117)",
+    "since": "2026-11-05T22:41:41.512Z"
+  }
+}
