@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="138" viewBox="0 0 900 138" role="img" aria-label="Incident log: 1 incident in 90 days · 1 auto-remediated · MTTR 4h 46m. Latest: INC-0001 img.shields.io stopped serving images">
+<title>Incident log: 1 incident in 90 days · 1 auto-remediated · MTTR 4h 46m. Latest: INC-0001 img.shields.io stopped serving images</title>
+<style>
+  text { font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif; fill: #E6EDF3; }
+  .mono { font-family: ui-monospace,SFMono-Regular,'Cascadia Code',Consolas,'Liberation Mono',Menlo,monospace; }
+  .title { font-size: 15px; font-weight: 600; }
+  .muted { fill: #8B949E; }
+  .label { font-size: 12px; fill: #8B949E; }
+  .num { font-size: 26px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .small { font-size: 11px; fill: #8B949E; }
+  .tab { font-variant-numeric: tabular-nums; }
+  .fade { animation: fade .6s ease-out backwards; }
+  .grow { transform-box: fill-box; transform-origin: left center; animation: grow .9s cubic-bezier(.2,.7,.2,1) backwards; }
+  .rise { transform-box: fill-box; transform-origin: center bottom; animation: rise .8s cubic-bezier(.2,.7,.2,1) backwards; }
+  .draw { stroke-dasharray: 2400; stroke-dashoffset: 0; animation: draw 2s ease-out backwards; }
+  .pulse { transform-box: fill-box; transform-origin: center; animation: pulse 2s ease-out infinite; }
+  @keyframes fade { from { opacity: 0; transform: translateY(6px); } }
+  @keyframes grow { from { transform: scaleX(0); } }
+  @keyframes rise { from { transform: scaleY(0); } }
+  @keyframes draw { from { stroke-dashoffset: 2400; } }
+  @keyframes pulse { from { transform: scale(1); opacity: .7; } to { transform: scale(2.6); opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } .pulse { display: none; } }
+</style>
+<defs>
+  <linearGradient id="brand" x1="0" x2="1" y1="0" y2="0">
+    <stop offset="0" stop-color="#58A6FF"/><stop offset="1" stop-color="#A371F7"/>
+  </linearGradient>
+</defs>
+<rect x="0.5" y="0.5" width="899" height="137" rx="12" fill="#0D1117" stroke="#30363D"/>
+<rect x="24" y="22" width="4" height="16" rx="2" fill="url(#brand)"/>
+<text x="36" y="35" class="title">Incident log · self-healing</text>
+<text x="876" y="35" class="small" text-anchor="end">27 widgets and 5 endpoints watched hourly</text>
+<text x="24" y="60" class="label">1 incident in 90 days · 1 auto-remediated · MTTR 4h 46m</text>
+<g class="fade" style="animation-delay:0.15s">
+  
+  <circle cx="30" cy="88" r="4" fill="#D29922"/>
+  <text x="44" y="93" class="mono small">INC-0001</text>
+  <text x="112" y="93" font-size="13.5" font-weight="600">img.shields.io stopped serving images<tspan class="small" dx="8" fill="#A371F7" style="fill:#A371F7">⚡ auto-remediated</tspan></text>
+  <text x="112" y="112" class="small">4 images swapped for text fallbacks automatically → Service back; original images restored automatically</text>
+  <rect x="738.8" y="77" width="137.2" height="22" rx="11" fill="#3FB950" fill-opacity=".12" stroke="#3FB950" stroke-opacity=".4"/>
+  <text x="807.4" y="92" font-size="11.5" font-weight="600" text-anchor="middle" fill="#3FB950" style="fill:#3FB950">Resolved in 4h 46m</text>
+  <text x="876" y="112" class="small" text-anchor="end">8d ago</text>
+</g>
+</svg>
