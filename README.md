@@ -4,9 +4,9 @@
 
 <br/>
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-vishwa--b.vercel.app-58A6FF?style=for-the-badge&logo=vercel&logoColor=white&labelColor=0D1117)](https://vishwa-b.vercel.app/)
+[<!--heal:e28fd22d--><code>Portfolio</code><!--/heal:e28fd22d-->](https://vishwa-b.vercel.app/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0D1117)](https://linkedin.com/in/vishwab0815)
-[![Email](https://img.shields.io/badge/Email-Say_hi-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0D1117)](mailto:vishwab0815@gmail.com)
+[<!--heal:2c2d949b--><code>Email</code><!--/heal:2c2d949b-->](mailto:vishwab0815@gmail.com)
 
 </div>
 
@@ -69,10 +69,10 @@ I build systems that **watch, reason and act on their own**: an AIOps engine tha
       <img src="assets/projects/algopilot.svg" alt="AlgoPilotX draws a live Heikin-Ashi chart with a breakout entry and trailing stop" width="100%" />
       <h3>📈 AlgoPilotX BTC</h3>
       <p>Real-time paper-trading engine for the BTCUSDT perpetual, written in Rust. It runs a Heikin-Ashi breakout strategy on live mark-price and order-book feeds, with trend and volatility filters, trailing stops and a crash-safe ledger.</p>
-      <img src="https://img.shields.io/badge/Private_repo-30363D?style=flat-square&logo=github&logoColor=white" alt="Private repo" />
+      <!--heal:d876e11e--><code>Private repo</code><!--/heal:d876e11e-->
       <img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />
-      <img src="https://img.shields.io/badge/Live_market_data-238636?style=flat-square" alt="Live market data" />
-      <img src="https://img.shields.io/badge/Paper_trading-6E40C9?style=flat-square" alt="Paper trading" />
+      <!--heal:92991898--><code>Live market data</code><!--/heal:92991898-->
+      <!--heal:73e31e8d--><code>Paper trading</code><!--/heal:73e31e8d-->
     </td>
   </tr>
   <tr>
@@ -80,7 +80,7 @@ I build systems that **watch, reason and act on their own**: an AIOps engine tha
       <a href="https://github.com/vishwab0815/CTF-CyberPunk"><img src="assets/projects/ctf-cyberpunk.svg" alt="CTF-CyberPunk: neon grid and a glitching ACCESS GRANTED" width="100%" /></a>
       <h3><a href="https://github.com/vishwab0815/CTF-CyberPunk">🛡️ CTF-CyberPunk</a></h3>
       <p>A narrative-driven cyberpunk CTF platform with animated terminals, interactive hacking levels and real-world web security challenges.</p>
-      <a href="https://ctfcybersec.vercel.app"><img src="https://img.shields.io/badge/Live_demo-58A6FF?style=flat-square&logo=vercel&logoColor=white" alt="Live demo" /></a>
+      <a href="https://ctfcybersec.vercel.app"><!--heal:0bfaf911--><code>Live demo</code><!--/heal:0bfaf911--></a>
       <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js" />
       <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
     </td>
@@ -88,7 +88,7 @@ I build systems that **watch, reason and act on their own**: an AIOps engine tha
       <a href="https://github.com/vishwab0815/LLM-Trainer"><img src="assets/projects/bottrainer.svg" alt="BotTrainer turns speech into intent JSON with Whisper and Llama-3" width="100%" /></a>
       <h3><a href="https://github.com/vishwab0815/LLM-Trainer">🤖 BotTrainer</a></h3>
       <p>NLU platform that replaces model training with zero- and few-shot prompting on Llama-3-8B, plus Whisper for voice input. It does intent classification and entity extraction with Pydantic-validated output.</p>
-      <a href="https://llm-trainer.streamlit.app/"><img src="https://img.shields.io/badge/Live_demo-58A6FF?style=flat-square&logo=streamlit&logoColor=white" alt="Live demo" /></a>
+      <a href="https://llm-trainer.streamlit.app/"><!--heal:cc2e490a--><code>Live demo</code><!--/heal:cc2e490a--></a>
       <img src="https://img.shields.io/badge/Hugging_Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black" alt="Hugging Face" />
       <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white" alt="Streamlit" />
     </td>
